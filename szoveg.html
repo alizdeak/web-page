@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Village Website</title>
+    <style>
+        /* Általános stílusok */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #EDE5DA;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Fejléc stílusok */
+        .header {
+            background-color: #65402B;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Navigációs menü stílusok */
+        .navbar {
+            background-color: #65402B;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Tartalom stílusok */
+        .content {
+            padding: 20px;
+        }
+
+        .content section {
+            margin-bottom: 40px;
+        }
+
+        .content h1 {
+            color: #65402B;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px; /* Set the font size to 36 pixels */
+            text-decoration: underline; /* Underline the text */
+        }
+
+        .content h2 {
+            color: #65402B;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        /* Képek stílusok */
+.content img {
+    display: block;
+    margin: 20px auto; /* Added margin to top and bottom, and auto to left and right */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Text stílusok */
+.content p,
+.content h2 {
+    margin-bottom: 20px; /* Add margin to the bottom of paragraphs and headings */
+}
+
+
+        .image-left {
+            float: left;
+            margin-right: 10px !important; /* Added !important to override any conflicting styles */
+            margin-top: 40px !important; /* Added !important to increase top margin */
+            margin-bottom: 40px !important; /* Added !important to increase bottom margin */
+        }
+
+        .image-right {
+            float: right;
+            margin-left: 10px !important; /* Added !important to override any conflicting styles */
+            margin-top: 40px !important; /* Added !important to increase top margin */
+            margin-bottom: 40px !important; /* Added !important to increase bottom margin */
+        }
+
+        /* Lábléc stílusok */
+        .footer {
+            background-color: #65402B;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Képgaléria stílusok */
+        .image-gallery {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            flex: 0 0 30%;
+            margin-bottom: 20px;
+        }
+
+        .image-container img:last-child {
+            margin-right: 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b4513; /* Brown color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #cd8500; /* Darker brown color on hover */
+        }
+
+        /* Added styles for image spacing */
+        .content img {
+            margin: 20px auto; /* Center images with 20px margin all around */
+        }
+
+        /* Increased margin for images to be further from text */
+        .image-left,
+        .image-right {
+            margin-top: 40px !important; /* Increased top margin to 40px */
+            margin-bottom: 40px !important; /* Increased bottom margin to 40px */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Üdvözöljük falunkban</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">A falurol</a></li>
+            <li><a href="#attractions"> Terulet </a></li>
+            <li><a href="#events">Fejlodese</a></li>
+            <li><a href="#contact"> Népszokások és Hagyományok</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section id="about">
+            <h1>Név eredete és jelentése</h1>
+            <p>Az eredeti román név, <span class="highlight">Dumbrava</span>, a "liget" jelentésű szóból származik, utalva az erdős vidék jellegzetességére.</p>
+            <p>A magyar nevet, <span class="highlight">Igazfalva</span>, 1893-ban kapta, amikor Bethlen András gróf döntése alapján az igazságosság és egyenlőség elvei mentén nevezték el a falut.</p>
+        </section>
+
+        <section id="attractions">
+            <h1>A telepités</h1>
+            <h2>Területi kezdetek és tervezett telepítés</h2>
+            <p>A Facsetttől Zsupányig terjedő terület eredetileg a kincstár tulajdonában volt, összesen 6583 kataszteri holdnyi erdő és mezőgazdasági területet foglalt magában.</p>
+            <p>Igazfalvára 4500 kataszteri holdnyi területet szántak a telepítés céljára, kezdetben 205 házhellyel.</p>
+            <img src="4.jpeg" alt="Image of the village" class="image-right">
+        </section>
+
+        <section id="events">
+            <h1>Gazdasági Fejlődés Igazfalván</h1>
+            <h2>Földművelés és talajjavítás</h2>
+            <p>Kezdetben a földminőség hiányosságaival küzdtek, de talajjavító módszerekkel, mint a mészpát alkalmazása, átalakították a podzol talajt.</p>
+            <img src="2.jpeg" alt="Image of events" class="image-left">
+            <h2>Tanulási folyamatok és gazdasági fejlődés</h2>
+            <p>Sok telepesnek kezdetben nem volt saját földje, és a gazdasági ismeretek hiánya miatt néhányan csak felületesen művelték területeiket.</p>
+            <p> o	Az Igazfalva határa 5722 kataszteri holdra nőtt a telepítés befejeztével, összesen 5145 kataszteri holdot képviselve.</p>
+        </section>
+
+        <section id="events">
+            <h1>Igazfalvai Népszokások és Hagyományok</h1>
+            <h2>Földművelés és talajjavítás</h2>
+            <p> Az Igazfalva telepesei számára a népszokások központi szerepet töltenek be, nem csupán szórakozást nyújtanak, hanem fontosak a közösség összetartásában és az identitás kialakításában is.</p>
+            <img src="babszin.jpg" alt="Image of events" class="image-left">
+            <h2>Kalátka és Citerazenék</h2>
+            <p>A kalátka jellegzetes esemény, amely összehozza az embereket, akik közösen dolgoznak, miközben az ifjakat citerazenével kísérik. Ez a szokás nem csupán a közösség egységét és összetartását szimbolizálja, de erősíti is az együvé tartozás érzését.</p>
+            <h2>Disznótoros Vacsora</h2>
+            <img src="zenekar.jpg" alt="Image of events" class="image-right">
+            <p>Az asszonyok finomságokat készítenek elő, míg a telepesek közösen dolgoznak a disznóvágás során. Ez a népszokás nemcsak a gazdag étkezést ünnepli meg, hanem a közösségi együttlétet és a munkamegosztás fontosságát is hangsúlyozza.</p>
+            <h2>Egyéb Népszokások</h2>
+            <p>A névestékek, az éjjeli zeneadás, a májusfa, a bálok és a lakodalmak mind olyan hagyományok, amelyek fontos szerepet játszanak az Igazfalva telepeseinek életében. Ezek az események lehetőséget nyújtanak az embereknek a közösségi kapcsolatok ápolására és az együttlét örömének megélésére. Ezáltal erősítik a település identitását és összetartozásá</p>
+            <img src="neptanc.jpg" alt="Image of events" class="image-left">
+        </section>
+
+        <section id="events">
+            <h1>A község fejlődése</h1>
+            <h2>A földművelés fejlődése</h2>
+            <p>Az Igazfalván lévő föld eredetileg barna agyagos volt, ám a gazdák kemény munkájának köszönhetően mára fehér, gyenge minőségű podzol talajként ismert.  </p>
+            <br>
+            <br>
+        <br>
+        <br>
+        <br>
+            <img src="kep.jpeg" alt="Image of events" class="image-left"> 
+            <p>A búza, rozs és más növények elégedő termést hoznak, ám az igazalva még kevésbé termékeny volt. Az építkezés és földmunka lassú volt, és az írtás is hosszú ideig haladt. Öt év után még csak a szántóföldek harmada volt tiszta a cserjéktől és tuskóktól.</p>
+            <img src="kep2.jpeg" alt="Image of events" class="image-right">
+        </section>
+
+        <section id="events">
+            <h2>Telepítés és pénzügyi kihívások</h2>
+            <p> A telepítés során nehézségekbe ütköztek, mivel siettek az erdők kivágásával. Az első évben csak a megművelhető terület kétharmadát adták át, a maradékot csak később tervezték. Ezért 1898 végéig korlátozva volt a telepesek határuk használata. </p>
+            <img src="kep1.jpeg" alt="Image of events" class="image-left">
+            <p>A rossz termés miatt sokan kölcsönkérték a kincstártól a búzát, kukoricát és szénát, és akik még mindig nem irtották ki a szántóföldből a 12 holdat, pénzkölcsönt kaptak a terület megtisztítására.</p>
+            <p>A telepesek összesen 85100 k-t vettek igénybe, ami jelentős lökést adott az új település fejlődésének.</p>
+        </section>
+
+        <section id="events">
+            <h2>Gazdasági átalakulás és fejlődés</h2>
+            <p>Az ingyenévek leteltével és a művelhető terület növekedésével sokan rádöbbentek, hogy hiányoznak a gazdasági ismeretek. Ennek következtében sok telepes nem tudta megművelni földjét, így bérbe adták azt.  </p>           
+            <p>A területeket felületesen szántották és nem megfelelően gazdálkodtak, ami rossz termést eredményezett. Az adók és közterhek miatt sok telepes adós volt a kincstárnak, de a rendesen fizető gazdák gazdasági sikerüket igazolták.</p>
+        </section>
+
+        <section id="events">
+            <h2>Gazdasági fejlődés és példák</h2>
+            <p>A kiváló gazdálkodók tisztára meszelték házaikat, gazdag állatállományt tartottak, és modern gazdasági eszközökkel felszerelt istállóval rendelkeztek. Ezek között voltak vetőgépek, szelelőrosta, boronák, ekék, szekerek és lóvontatású gépek.  </p>
+            <p>A módosabb telepesek hatékonyan művelték földjeiket, sokféle növényt és állatot termeltek. A gazdasági fejlődés példái közé tartoztak a jó gyümölcsösök, gyümölcsfaültetvények, valamint a helyi hitelszövetkezet sikere.</p>
+        </section>
+
+        <section id="image-gallery">
+            <style>
+                .image-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .image-container img {
+            flex: 1;
+            max-width: 20%; /* Módosítva a képek szélességét */
+            height: auto;
+        }
+            </style>
+            <h1>Képgaléria</h1>
+            <div class="gallery-container">
+                <div class="image-container">
+                    <img src="iskola.jpeg" alt="Image 1">
+                    <img src="arrow.jpeg" alt="Image 2">
+                    <img src="iskola.jpg" alt="Image 3">
+                </div>
+                <div class="image-container">
+                    <img src="kaja.jpeg" alt="Image 1">
+                    <img src="arrow.jpeg" alt="Image 2">
+                    <img src="sura.jpg" alt="Image 3">
+                </div>
+                <div class="image-container">
+                    <img src="templom.jpeg" alt="Image 1">
+                    <img src="arrow.jpeg" alt="Image 2">
+                    <img src="temlom.jpg" alt="Image 3">
+                </div>
+                <div class="image-container">
+                    <img src="kultur.jpg" alt="Image 1">
+                    <img src="arrow.jpeg" alt="Image 2">
+                    <img src="camin.jpg" alt="Image 3">
+                </div>
+                <div class="image-container">
+                    <img src="szallas.jpeg" alt="Image 1">
+                    <img src="arrow.jpeg" alt="Image 2">
+                    <img src="panzio.jpg" alt="Image 3">
+                </div>
+            </div>
+        </section>
+    </main>
+    <a href="main.html"  class="button">Vissza a főoldalra</a>
+    <footer class="footer">
+        <p>&copy; 2024 Igazfalva.</p>
+    </footer>
+</body>
+</html>

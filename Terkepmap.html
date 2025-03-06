@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 500px; /* Adjust height as needed */
+      position: relative;
+    }
+
+    .map {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #ccc;
+    }
+
+    .marker {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    /* Adjust marker position based on the coordinates from the link */
+    .marker.marker-1 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Add more marker styles as needed */
+  </style>
+</head>
+<body>
+
+<div class="map-container">
+  <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2778.694333370631!2d22.113190100000002!3d45.82400669999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474fa66c1be73b75%3A0x51ef1291f24c036f!2s307155%20Dumbrava!5e0!3m2!1sen!2sro!4v1648767849374!5m2!1sen!2sro" allowfullscreen="" loading="lazy"></iframe>
+  <div class="marker marker-1" onclick="showMarkerInfo(1)"></div>
+  <!-- Add more markers with different classes and onclick events -->
+</div>
+
+<script>
+  function showMarkerInfo(markerId) {
+    // Handle marker click event
+    switch (markerId) {
+      case 1:
+        window.location.href = 'https://www.google.com/maps/place/307155+Dumbrava/@45.8240067,22.1131901,15.44z/';
+        break;
+      // Add more cases for other markers
+    }
+  }
+</script>
+
+</body>
+</html>

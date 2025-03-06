@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #eedd82; /* Világosabb sárgásbarna háttér */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .quiz-container {
+        background-color: #8b4513; /* Sötétebb barna konténer */
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(139, 69, 19, 0.4);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .question {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(139, 69, 19, 0.3);
+        transition: transform 0.3s ease-in-out;
+        height: 200px; /* Set a fixed height for the images */
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 15px;
+        color: #8b7355; /* Barnás szöveg */
+        font-weight: bold;
+    }
+
+    button {
+        padding: 10px;
+        background-color: #b8860b; /* Barna gomb háttér */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #cd8500; /* Sötétebb barna gomb háttér hover állapotban */
+    }
+
+    #score {
+        color: #b8860b; /* Barna pontszám szín */
+        font-weight: bold;
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+    }
+</style>
+
+  <title>Térképes Kvíz</title>
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="question" id="question1">
+      <p style="font-size: 28px;">Hol található a terkepen a(z) iskola ?</p>
+      <div class="image-container">
+        <img src="simaterkep.jpg"  alt="Kép 1">
+        <img src="iskola.jpeg" alt="Kép 2">
+      </div>
+      <div class="answer-options">
+        <label>
+          <input type="radio" name="q1" value="a"> Alp 1
+        </label>
+        <label>
+          <input type="radio" name="q1" value="b"> Alp 2
+        </label>
+        <label>
+          <input type="radio" name="q1" value="c"> Alp 3
+        </label>
+        <label>
+          <input type="radio" name="q1" value="d"> Alp 4
+        </label>
+        <label>
+          <input type="radio" name="q1" value="e"> Alp 5  
+        </label>
+      </div>
+    </div>
+
+    <div class="question" id="question2" style="display: none;">
+      <p style="font-size: 28px;">Hol található a terkepen a(z) templom ?</p>
+      <div class="image-container">
+        <img src="simaterkep.jpg"  alt="Kép 1">
+        <img src="templom.jpeg" alt="Kép 2">
+      </div>
+      <div class="answer-options">
+        <label>
+          <input type="radio" name="q2" value="a"> Alp 1
+        </label>
+        <label>
+          <input type="radio" name="q2" value="b"> Alp 2
+        </label>
+        <label>
+          <input type="radio" name="q2" value="c"> Alp 3
+        </label>
+        <label>
+          <input type="radio" name="q2" value="d"> Alp 4
+        </label>
+        <label>
+          <input type="radio" name="q1" value="e"> Alp 5  
+        </label>
+      </div>
+    </div>
+  
+    <div class="question" id="question3" style="display: none;">
+      <p style="font-size: 28px;">Hol található a terkepen a(z) etterem ?</p>
+      <div class="image-container">
+        <img src="simaterkep.jpg"  alt="Kép 1">
+        <img src="kaja.jpeg" alt="Kép 2">
+      </div>
+      <div class="answer-options">
+        <label>
+          <input type="radio" name="q3" value="a"> Alp 1
+        </label>
+        <label>
+          <input type="radio" name="q3" value="b"> Alp 2
+        </label>
+        <label>
+          <input type="radio" name="q3" value="c"> Alp 3
+        </label>
+        <label>
+          <input type="radio" name="q3" value="d"> Alp 4
+        </label>
+        <label>
+          <input type="radio" name="q1" value="e"> Alp 5  
+        </label>
+      </div>
+    </div>
+
+    <div class="question" id="question4" style="display: none;">
+      <p style="font-size: 28px;">Hol található a terkepen a(z) szallas ?</p>
+      <div class="image-container">
+        <img src="simaterkep.jpg"  alt="Kép 1">
+        <img src="szallas.jpeg" alt="Kép 2">
+      </div>
+      <div class="answer-options">
+        <label>
+          <input type="radio" name="q3" value="a"> Alp 1
+        </label>
+        <label>
+          <input type="radio" name="q3" value="b"> Alp 2
+        </label>
+        <label>
+          <input type="radio" name="q3" value="c"> Alp 3
+        </label>
+        <label>
+          <input type="radio" name="q3" value="d"> Alp 4
+        </label>
+        <label>
+          <input type="radio" name="q1" value="e"> Alp 5  
+        </label>
+      </div>
+    </div>
+
+    <div class="question" id="question5" style="display: none;">
+      <p style="font-size: 28px;">Hol található a terkepen a(z) etterem ?</p>
+      <div class="image-container">
+        <img src="simaterkep.jpg"  alt="Kép 1">
+        <img src="kultur.jpg" alt="Kép 2">
+      </div>
+      <div class="answer-options">
+        <label>
+          <input type="radio" name="q3" value="a"> Alp 1
+        </label>
+        <label>
+          <input type="radio" name="q3" value="b"> Alp 2
+        </label>
+        <label>
+          <input type="radio" name="q3" value="c"> Alp 3
+        </label>
+        <label>
+          <input type="radio" name="q3" value="d"> Alp 4
+        </label>
+        <label>
+          <input type="radio" name="q1" value="e"> Alp 5  
+        </label>
+      </div>
+    </div>
+
+    <button class="prev" onclick="prevQuestion()">Előző</button>
+    <button class="next" onclick="nextQuestion()">Következő</button>
+  
+    <div id="submit-btn" style="display:none;">
+      <button onclick="showScore()" style="background-color: #8B4513;">Eredmény</button>
+    </div>
+    
+    <div id="results" style="display:none;">
+        <p>Pontszám: <span id="scoreValue"></span>/5</p>
+
+      <a href="main.html">Vissza a főoldalra</a>
+      <button onclick="window.location.href='kviz.html'">Próbáld ki a Sima Kvízet</button> 
+    </div>
+
+    <script>
+      let currentQuestion = 1;
+      let score = 0;
+
+      function checkAnswer(questionNumber, correctAnswer) {
+        const selectedAnswer = document.querySelector(`input[name="q${questionNumber}"]:checked`);
+        if (selectedAnswer) {
+          if (selectedAnswer.value === correctAnswer) {
+            score++;
+          }
+        }
+      }
+
+      function showQuestion(questionNumber) {
+        document.getElementById(`question${questionNumber}`).style.display = 'block';
+        currentQuestion = questionNumber;
+        hideScore();
+      }
+
+      function hideQuestion(questionNumber) {
+        document.getElementById(`question${questionNumber}`).style.display = 'none';
+      }
+
+      function showScore() {
+        document.getElementById('scoreValue').innerText = score;
+        document.getElementById('results').style.display = 'block';
+        hideQuestion(currentQuestion);
+      }
+
+      function hideScore() {
+        document.getElementById('results').style.display = 'none';
+      }
+
+      function prevQuestion() {
+        if (currentQuestion > 1) {
+          hideQuestion(currentQuestion);
+          showQuestion(currentQuestion - 1);
+        }
+      }
+
+      function nextQuestion() {
+        // A következő kérdés előtt ellenőrizze a választ
+        checkAnswer(currentQuestion, 'c');
+
+        // Ha az utolsó kérdésnél vagyunk
+if (currentQuestion === 5) {
+  // Kiírás a pontszámról
+  showScore();
+  // Elrejtjük a következő gombot
+  document.querySelector('.next').style.display = 'none'; // Corrected selector
+  // Megjelenítjük az eredmény gombot
+  document.getElementById('submit-btn').style.display = 'block';
+} else {
+  // Hasonlóképpen minden egyéb kérdéshez
+  hideQuestion(currentQuestion);
+  showQuestion(currentQuestion + 1);
+}
+      }
+
+      // Kezdeti kérdés megjelenítése
+      showQuestion(currentQuestion);
+    </script>
+  </body>
+</html>

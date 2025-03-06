@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form in HTML and CSS | Codehal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('background.jpg'); /* Replace 'background.jpg' with your image file */
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* Ensure full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper {
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 400px; /* Limit container width */
+    }
+
+    .container {
+        margin-bottom: 20px;
+    }
+
+    .container h2 {
+        margin-top: 0;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        width: calc(100% - 40px); /* Adjust input width */
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .remember-forgot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .remember-forgot a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .remember-forgot input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    input[type="submit"],
+    .next-button {
+        width: 100%; /* Make button full width */
+        padding: 12px;
+        margin-top: 20px;
+        background-color: #007bff; /* Blue background color */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover,
+    .next-button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+    .register-link {
+        color: #007bff; /* Blue color for register link */
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    .register-link:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+
+</style>
+
+<body>
+    <div class="wrapper">
+        <form action="register.php" method="post">
+            <div class="container">
+                <h2>Login</h2>
+
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <i class='bx bxs-user'></i>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <i class='bx bxs-lock-alt'></i>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <i class='bx bx-envelope'></i>
+
+                
+
+                <input type="submit" value="Login">
+            </div>
+        </form>
+        <p><a href="loginhtml.html" class="register-link">Don't have an account? Register</a></p>
+        <a href="main.html" class="next-button">KÖVETKEZŐ</a>
+    </div>
+
+</body>
+
+</html>
+
+
+
+<! DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Login Form in HTML and CSS | Codehal</title>
+<link rel="stylesheet" href="style.css">
+</body>
+
+</html>

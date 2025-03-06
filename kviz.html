@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> INTERAKTI KVIZ</title>
+  <link rel="stylesheet" href="quiz.css">
+  
+  <style>
+    body {
+      background-color: #8B4513; /* Brown background */
+      font-family: Arial, sans-serif; /* Font type */
+      color: #FFFFFF; /* White text */
+    }
+
+    .quiz {
+      background-color: #D2B48C; /* Light brown */
+      border-radius: 10px; /* Rounded corners */
+      padding: 20px; /* Padding */
+      max-width: 600px; /* Maximum width */
+      margin: 20px auto; /* Centered */
+    }
+
+    .question {
+      margin-bottom: 20px; /* Spacing between questions */
+    }
+
+    .choices label {
+      margin-right: 10px; /* Spacing between choices */
+    }
+
+    .prev, .next, button, a {
+      background-color: #8B4513; /* Brown button background */
+      color: #FFFFFF; /* White text */
+      border: none; /* No border */
+      border-radius: 5px; /* Rounded corners */
+      padding: 10px 20px; /* Padding */
+      cursor: pointer; /* Pointer cursor */
+      margin-right: 10px; /* Right margin */
+    }
+
+    .prev:hover, .next:hover, button:hover, a:hover {
+      background-color: #A0522D; /* Darker brown button background on hover */
+    }
+
+    #submit-btn button, #submit-btn a {
+      background-color: #8B4513; /* Brown result button background */
+      color: #FFFFFF; /* White text */
+      border: none; /* No border */
+      border-radius: 5px; /* Rounded corners */
+      padding: 10px 20px; /* Padding */
+      cursor: pointer; /* Pointer cursor */
+      margin-top: 20px; /* Top margin */
+    }
+
+    #submit-btn button, #submit-btn a:hover {
+      background-color: #A0522D; /* Darker brown result button background on hover */
+    }
+
+    input[type="text"] {
+      background-color: #F5F5DC; /* Light brown input background */
+      border: none; /* No border */
+      border-radius: 5px; /* Rounded corners */
+      padding: 5px; /* Padding */
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz">
+    <div class="question" id="question1">
+      <p>1. Milyen jelentése van az Igazfalva település eredeti román nevének, Dumbrava-nak?</p>
+      <div class="choices">
+        <label><input type="radio" name="q1" value="A">A. Liget</label><br>
+        <label><input type="radio" name="q1" value="B">B. London</label><br>
+        <label><input type="radio" name="q1" value="C">C. Laget</label><br>
+        <label><input type="radio" name="q1" value="D">D. Leget</label><br>
+      </div>
+    </div>
+    <div class="question" id="question2">
+      <p>2. Ki csatolta hozzá az Igazfalva település környékét a furdiai kerülethez a XVI. század végén?</p>
+      <div class="choices">
+        <label><input type="radio" name="q2" value="A">A. Báthory Endre</label><br>
+        <label><input type="radio" name="q2" value="B">B. Báthory Lajos</label><br>
+        <label><input type="radio" name="q2" value="C">C. Báthory Zsigmond </label><br>
+        <label><input type="radio" name="q2" value="D">D. Báthory Zoltan</label><br>
+      </div>
+    </div>
+    <div class="question" id="question3">
+      <p>3. Solás sal történt a telephelyek kiválasztása, majd az építkezésekre pénzügyi segítséget nyújtottak előlegként. (Igaz/hamis)</p>
+      <div class="choices">
+        <label><input type="radio" name="q3" value="true">Igaz</label><br>
+        <label><input type="radio" name="q3" value="false">Hamis</label><br>
+      </div>
+    </div>
+    <div class="question" id="question4">
+      <p>4. Mekkora területet foglalt magában eredetileg a Facsetttől Zsupányig terjedő terület?</p>
+      <input type="text" name="q4">
+    </div>
+    <div class="question" id="question5">
+      <p>5. Hány telephely alakult ki az Igazfalva telepítésének befejeztével?</p>
+      <div class="choices">
+        <label><input type="radio" name="q5" value="A">A. 250</label><br>
+        <label><input type="radio" name="q5" value="B">B. 265</label><br>
+        <label><input type="radio" name="q5" value="C">C. 251</label><br>
+        <label><input type="radio" name="q5" value="D">D. 1000</label><br>
+      </div>
+    </div>
+    <div class="question" id="question6">
+      <p>6. Mikor nyerte el Igazfalva település az Újvár nevet?</p>
+      <input type="text" name="q6">
+    </div>
+    <div class="question" id="question7">
+      <p>7. Kik telepítették Igazfalvát?</p>
+      <div class="choices">
+        <label><input type="radio" name="q7" value="A">A. 	Fekete István</label><br>
+        <label><input type="radio" name="q7" value="B">B. 	Herczog György</label><br>
+        <label><input type="radio" name="q7" value="C">C. 	Molnár Béla </label><br>
+        <label><input type="radio" name="q7" value="D">D. 	Fekete Kálmán</label><br>
+      </div>
+    </div>
+    <div class="question" id="question8">
+      <p>8.	Milyen jellegű volt Igazfalva elhelyezkedése, mielőtt faluvá alakult?</p>
+      <div class="choices">
+        <label><input type="radio" name="q8" value="A">A. 	mezőgazdasági település</label><br>
+        <label><input type="radio" name="q8" value="B">B. 	határőr telep</label><br>
+        <label><input type="radio" name="q8" value="C">C. 	erdőtelep</label><br>
+        <label><input type="radio" name="q8" value="D">D. 	város</label><br>
+      </div>
+    </div>
+    <div class="question" id="question9">
+      <p>9. Milyen módszert használtak Igazfalván a talaj javítására?</p>
+      <div class="choices">
+        <label><input type="radio" name="q9" value="A">A. Nitrogén műtrágyázás</label><br>
+        <label><input type="radio" name="q9" value="B">B. Komposztálás</label><br>
+        <label><input type="radio" name="q9" value="C">C. Mészpát alkalmazása</label><br>
+        <label><input type="radio" name="q9" value="D">D. Permetezés</label><br>
+      </div>
+    </div>
+    <div class="question" id="question10">
+      <p>10. Mi volt a telepesek fő nehézsége a földművelés kezdetén?</p>
+      <div class="choices">
+        <label><input type="radio" name="q10" value="A">A. Rossz terméshozam</label><br>
+        <label><input type="radio" name="q10" value="B">B. Munkaerőhiány</label><br>
+        <label><input type="radio" name="q10" value="C">C. Gazdasági ismeretek hiánya</label><br>
+        <label><input type="radio" name="q10" value="D">D. Vízhiány</label><br>
+      </div>
+    </div>
+    <div class="question" id="question11">
+      <p>11. Melyik hagyományos esemény segíti elő az Igazfalva közösségének összetartását?</p>
+      <div class="choices">
+        <label><input type="radio" name="q11" value="A">A. Disznótoros vacsora</label><br>
+        <label><input type="radio" name="q11" value="B">B. Színházi előadások</label><br>
+        <label><input type="radio" name="q11" value="C">C. Táncház</label><br>
+        <label><input type="radio" name="q11" value="D">D. Halászati ünnep</label><br>
+      </div>
+    </div>
+    <div class="question" id="question12">
+      <p>12. Milyen támogatást kaptak a telepesek a kincstártól a terméshozam növeléséhez?</p>
+      <input type="text" name="q12">
+    </div>
+  </div>
+  <button class="prev" onclick="prevQuestion()">Előző</button>
+  <button class="next" onclick="nextQuestion()">Következő</button>
+
+  <div id="submit-btn" style="display:none; text-align: center;">
+    <button onclick="showScore()" style="background-color: #8B4513;">Eredmény</button>
+    <a href="main.html" class="next-button" style="background-color: #8B4513;">Vissza a főoldalra</a>
+    <button onclick="window.location.href='kepjatek.html'" style="background-color: #8B4513;">Próbáld ki a Képes Kvízet</button> 
+  </div>
+
+  <div id="results" style="display:none;">
+    <p>A pontszáma: <span id="score">0</span>/12</p>
+    <p id="feedback"></p>
+  </div>
+
+  <script>
+    let currentQuestion = 1;
+    const wrongAnswersList = [];
+
+    function showQuestion(questionNumber) {
+      const questions = document.querySelectorAll('.question');
+      questions.forEach(question => {
+        if (question.id === 'question' + questionNumber) {
+          question.style.display = 'block';
+        } else {
+          question.style.display = 'none';
+        }
+      });
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion === 13) { // If it's the last question
+        document.getElementById('submit-btn').style.display = 'block'; // Show the submit button
+        document.querySelector('.next').style.display = 'none'; // Hide the next button
+      }
+      showQuestion(currentQuestion);
+    }
+
+    function prevQuestion() {
+      currentQuestion--;
+      showQuestion(currentQuestion);
+    }
+
+    function showScore() {
+      let score = 0;
+      const numQuestions = document.querySelectorAll('.question').length;
+      for (let i = 1; i <= numQuestions; i++) {
+        const name = 'q' + i;
+        const inputs = document.getElementsByName(name);
+        let correct = false;
+        if (i === 1) { // Question 1
+          inputs.forEach(input => {
+            if (input.checked && input.value === 'A') {
+              score++;
+              correct = true;
+            }
+          });
+        } else if (i === 2) { // Question 2
+          inputs.forEach(input => {
+            if (input.checked && input.value === 'B') {
+              score++;
+              correct = true;
+            }
+          });
+        } else if (i === 3) { // Question 3
+          inputs.forEach(input => {
+            if (input.checked && input.value === 'true') {
+              score++;
+              correct = true;
+            }
+          });
+        } else if (i === 4) { // Question 4
+          const userInput = document.querySelector('input[name="q4"]').value.trim().toLowerCase();
+          if (userInput === '6583') {
+            score++;
+            correct = true;
+          }
+        } else if (i === 5) { // Question 5
+          inputs.forEach(input => {
+            if (input.checked && input.value === 'B') {
+              score++;
+              correct = true;
+            }
+          });
+        } else if (i === 6) { // Question 6
+          const userInput = document.querySelector('input[name="q6"]').value.trim().toLowerCase();
+          if (userInput === '1927') {
+            score++;
+            correct = true;
+          }
+        } else if (i === 7) { // Question 7
+          inputs.forEach(input => {
+            if (input.checked && input.value === 'B') {
+              score++;
+              correct = true;
+            }
+          });
+        } else if (i === 8) { // Question 8
+          inputs.forEach(input => {
+            if (input.checked && input.value === 'C') {
+              score++;
+              correct = true;
+            }
+          });
+        } else if (i === 9) { // Question 9
+          inputs.forEach(input => {
+            if (input.checked && input.value === 'A') {
+              score++;
+              correct = true;
+            }
+          });
+        } else if (i === 10) { // Question 10
+          inputs.forEach(input => {
+            if (input.checked && input.value === 'B') {
+              score++;
+              correct = true;
+            }
+          });
+        } else if (i === 11) { // Question 11
+          inputs.forEach(input => {
+            if (input.checked && input.value === 'A') {
+              score++;
+              correct = true;
+            }
+          });
+        } else if (i === 12) { // Question 12
+          const userInput = document.querySelector('input[name="Mezőgazdasági gépek"]').value.trim().toLowerCase();
+          if (userInput === '2') {
+            score++;
+            correct = true;
+          }
+        }
+        if (!correct) {
+          wrongAnswersList.push(i);
+        }
+      }
+      document.getElementById('score').textContent = score;
+      document.getElementById('results').style.display = 'block';
+      if (score === numQuestions) {
+        document.getElementById('feedback').textContent = 'Gratulálok! Helyes válaszok mind!';
+      } else {
+        document.getElementById('feedback').textContent = 'Sajnos nem minden válaszod helyes.';
+      }
+    }
+
+    showQuestion(currentQuestion);
+  </script>
+</body>
+</html>
